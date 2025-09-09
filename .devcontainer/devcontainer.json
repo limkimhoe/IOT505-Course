@@ -1,0 +1,25 @@
+{
+  "name": "Python Codespace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11", // Use desired Python version
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  // Run commands after container creation
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+  // Optional: VS Code settings
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  // Mount your workspace
+  "remoteUser": "vscode"
+}
